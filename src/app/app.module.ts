@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodolistComponent } from './MyComponent/todolist/todolist.component';
+import { VocablistComponent } from './vocabulay/vocablist/vocablist.component';
+import{HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodolistComponent
+    VocablistComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
