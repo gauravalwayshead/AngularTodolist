@@ -1,1 +1,23 @@
-<p>vocablist works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">AanNumber</th>
+                <th scope="col">AllotteeName</th>
+                <th scope="col">Contactno</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of getreult; let i = index" [attr.data-index]="i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{data.aan}}</td>
+                <td>{{data.allotedto}}</td>
+                <td>{{data.contactmobile}}</td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </div>
+</div>

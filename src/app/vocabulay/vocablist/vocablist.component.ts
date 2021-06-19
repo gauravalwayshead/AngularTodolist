@@ -8,10 +8,15 @@ import{DataserviceService} from '../../dataservice.service'
 })
 export class VocablistComponent implements OnInit {
  username:any;
- password:any;
+ password:any;  
+ getreult:any;
   constructor(public http:HttpClient,public dataservice:DataserviceService) { 
-    this.dataservice.getdata().subscribe(data=>{
-       
+    this.dataservice.getdata('10000061','all').subscribe(data=>{
+      this.getreult=data;
+      //console.log(this.getreult[0].aan); 
+      // this.dataservice.login().subscribe(result=>{
+      //   console.log(result);
+      // })
     })
   }
 
